@@ -1,0 +1,66 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML -->
+<html lang="es"> <!-- Idioma principal del documento -->
+<head> <!-- Encabezado de la página -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escalado responsive para móviles -->
+    <title>Contacto - Café LeBlanc Shibuya</title> <!-- Título de la pestaña -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Optimización de carga de fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Conexión anticipada a fuentes externas -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuentes externas -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Librería de íconos Font Awesome -->
+</head>
+<body> <!-- Cuerpo del documento -->
+    <header> <!-- Encabezado -->
+        <nav class="navbar"> <!-- Barra de navegación -->
+            <a href="index.html" class="logo">Café LeBlanc</a> <!-- Logo con enlace a inicio -->
+            <ul class="nav-links"> <!-- Lista de enlaces de navegación -->
+                <li><a href="index.html">Inicio</a></li> <!-- Enlace a Inicio -->
+                <li><a href="productos.html">Productos</a></li> <!-- Enlace a Productos -->
+                <li><a href="nosotros.html">Nosotros</a></li> <!-- Enlace a Nosotros -->
+                <li><a href="contacto.html">Contacto</a></li> <!-- Enlace a Contacto -->
+                <li><a href="login.html">Iniciar Sesión</a></li> <!-- Enlace a Iniciar Sesión -->
+                <li><a href="registro.html">Registro</a></li> <!-- Enlace a Registro -->
+            </ul>
+            <a href="cart.html" class="cart-icon"> <!-- Icono del carrito -->
+                <i class="fas fa-shopping-cart"></i> <!-- Ícono carrito -->
+                <span id="cart-count">0</span> <!-- Contador de productos en carrito -->
+            </a>
+        </nav>
+    </header>
+
+    <main> <!-- Contenido principal -->
+        <section id="contact" class="form-section"> <!-- Sección de contacto -->
+            <h2>Formulario de Contacto</h2> <!-- Título de la sección -->
+            <form id="contact-form"> <!-- Formulario de contacto -->
+                <div class="form-group"> <!-- Grupo de campo: nombre -->
+                    <label for="contact-name">Nombre Completo:</label> <!-- Etiqueta nombre -->
+                    <input type="text" id="contact-name" name="nombre" required> <!-- Input nombre -->
+                    <div class="invalid-feedback" id="contact-name-error"></div> <!-- Mensaje de error nombre -->
+                </div>
+                <div class="form-group"> <!-- Grupo de campo: correo -->
+                    <label for="contact-email">Correo:</label> <!-- Etiqueta correo -->
+                    <input type="email" id="contact-email" name="correo" required> <!-- Input correo -->
+                    <div class="invalid-feedback" id="contact-email-error"></div> <!-- Mensaje de error correo -->
+                </div>
+                <div class="form-group"> <!-- Grupo de campo: comentario -->
+                    <label for="contact-message">Comentario:</label> <!-- Etiqueta comentario -->
+                    <textarea id="contact-message" name="comentario" rows="5" required></textarea> <!-- Campo de texto -->
+                    <div class="invalid-feedback" id="contact-message-error"></div> <!-- Mensaje de error comentario -->
+                </div>
+                <button type="submit" class="submit-button">Enviar Mensaje</button> <!-- Botón de envío -->
+            </form>
+        </section>
+    </main>
+
+    <footer> <!-- Pie de página -->
+        <p>&copy; 2024 Café LeBlanc Shibuya. Todos los derechos reservados.</p> <!-- Derechos reservados -->
+        <div class="social-links"> <!-- Enlaces a redes sociales -->
+            <a href="#"><i class="fab fa-instagram"></i></a> <!-- Ícono Instagram -->
+            <a href="#"><i class="fab fa-tiktok"></i></a> <!-- Ícono TikTok -->
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script> <!-- Archivo JavaScript para interactividad -->
+</body>
+</html>

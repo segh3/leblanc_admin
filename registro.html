@@ -1,0 +1,104 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento -->
+<html lang="es"> <!-- Idioma principal del documento -->
+<head> <!-- Encabezado del documento -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escala para dispositivos móviles -->
+    <title>Registro - Café LeBlanc Shibuya</title> <!-- Título en la pestaña del navegador -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Enlace a la hoja de estilos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Optimización carga de fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Conexión anticipada a servidor de fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuentes externas -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Librería de íconos -->
+</head>
+<body> <!-- Cuerpo del documento -->
+    <header> <!-- Encabezado -->
+        <nav class="navbar"> <!-- Barra de navegación -->
+            <a href="index.html" class="logo">Café LeBlanc</a> <!-- Logo con enlace al inicio -->
+            <ul class="nav-links"> <!-- Lista de navegación -->
+                <li><a href="index.html">Inicio</a></li> <!-- Enlace a Inicio -->
+                <li><a href="productos.html">Productos</a></li> <!-- Enlace a Productos -->
+                <li><a href="nosotros.html">Nosotros</a></li> <!-- Enlace a Nosotros -->
+                <li><a href="contacto.html">Contacto</a></li> <!-- Enlace a Contacto -->
+                <li><a href="login.html">Iniciar Sesión</a></li> <!-- Enlace a Iniciar Sesión -->
+                <li><a href="registro.html">Registro</a></li> <!-- Enlace a Registro -->
+            </ul>
+            <a href="cart.html" class="cart-icon"> <!-- Icono del carrito -->
+                <i class="fas fa-shopping-cart"></i> <!-- Ícono carrito -->
+                <span id="cart-count">0</span> <!-- Contador del carrito -->
+            </a>
+        </nav>
+    </header>
+
+    <main> <!-- Contenido principal -->
+        <section id="register" class="form-section"> <!-- Sección de formulario -->
+            <h2>Registro de Usuario</h2> <!-- Título sección -->
+            <form id="register-form"> <!-- Formulario de registro -->
+                <div class="form-group"> <!-- Campo RUN -->
+                    <label for="register-run">RUN:</label> <!-- Etiqueta RUN -->
+                    <input type="text" id="register-run" name="run" required> <!-- Input RUN -->
+                    <div class="invalid-feedback" id="register-run-error"></div> <!-- Mensaje error RUN -->
+                </div>
+                <div class="form-group"> <!-- Campo Nombre -->
+                    <label for="register-name">Nombre:</label> <!-- Etiqueta Nombre -->
+                    <input type="text" id="register-name" name="nombre" required> <!-- Input Nombre -->
+                    <div class="invalid-feedback" id="register-name-error"></div> <!-- Mensaje error Nombre -->
+                </div>
+                <div class="form-group"> <!-- Campo Apellidos -->
+                    <label for="register-apellidos">Apellidos:</label> <!-- Etiqueta Apellidos -->
+                    <input type="text" id="register-apellidos" name="apellidos" required> <!-- Input Apellidos -->
+                    <div class="invalid-feedback" id="register-apellidos-error"></div> <!-- Mensaje error Apellidos -->
+                </div>
+                <div class="form-group"> <!-- Campo Correo -->
+                    <label for="register-email">Correo:</label> <!-- Etiqueta Correo -->
+                    <input type="email" id="register-email" name="correo" required> <!-- Input Correo -->
+                    <div class="invalid-feedback" id="register-email-error"></div> <!-- Mensaje error Correo -->
+                </div>
+                <div class="form-group"> <!-- Campo Fecha Nacimiento -->
+                    <label for="register-nacimiento">Fecha de Nacimiento:</label> <!-- Etiqueta Fecha -->
+                    <input type="date" id="register-nacimiento" name="nacimiento"> <!-- Input Fecha -->
+                </div>
+                <div class="form-group"> <!-- Campo Región -->
+                    <label for="register-region">Región:</label> <!-- Etiqueta Región -->
+                    <select id="register-region" name="region" required> <!-- Select Región -->
+                        <option value="">Seleccione una región</option> <!-- Opción por defecto -->
+                    </select>
+                    <div class="invalid-feedback" id="register-region-error"></div> <!-- Mensaje error Región -->
+                </div>
+                <div class="form-group"> <!-- Campo Comuna -->
+                    <label for="register-comuna">Comuna:</label> <!-- Etiqueta Comuna -->
+                    <select id="register-comuna" name="comuna" required disabled> <!-- Select Comuna -->
+                        <option value="">Seleccione una comuna</option> <!-- Opción por defecto -->
+                    </select>
+                    <div class="invalid-feedback" id="register-comuna-error"></div> <!-- Mensaje error Comuna -->
+                </div>
+                <div class="form-group"> <!-- Campo Dirección -->
+                    <label for="register-direccion">Dirección:</label> <!-- Etiqueta Dirección -->
+                    <input type="text" id="register-direccion" name="direccion" required> <!-- Input Dirección -->
+                    <div class="invalid-feedback" id="register-direccion-error"></div> <!-- Mensaje error Dirección -->
+                </div>
+                <div class="form-group"> <!-- Campo Contraseña -->
+                    <label for="register-password">Contraseña:</label> <!-- Etiqueta Contraseña -->
+                    <input type="password" id="register-password" name="contrasena" required> <!-- Input Contraseña -->
+                    <div class="invalid-feedback" id="register-password-error"></div> <!-- Mensaje error Contraseña -->
+                </div>
+                <div class="form-group"> <!-- Campo Confirmar Contraseña -->
+                    <label for="register-confirm-password">Confirmar Contraseña:</label> <!-- Etiqueta Confirmar -->
+                    <input type="password" id="register-confirm-password" name="confirmar-contrasena" required> <!-- Input Confirmar Contraseña -->
+                    <div class="invalid-feedback" id="register-confirm-password-error"></div> <!-- Mensaje error Confirmar Contraseña -->
+                </div>
+                <button type="submit" class="submit-button">Registrar</button> <!-- Botón enviar formulario -->
+            </form>
+        </section>
+    </main>
+
+    <footer> <!-- Pie de página -->
+        <p>&copy; 2024 Café LeBlanc Shibuya. Todos los derechos reservados.</p> <!-- Derechos reservados -->
+        <div class="social-links"> <!-- Enlaces redes sociales -->
+            <a href="#"><i class="fab fa-instagram"></i></a> <!-- Instagram -->
+            <a href="#"><i class="fab fa-tiktok"></i></a> <!-- TikTok -->
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script> <!-- Archivo JavaScript -->
+</body>
+</html>
